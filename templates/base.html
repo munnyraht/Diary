@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{url_for('static',filename='styles/style.css')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <script src="{{url_for('static',filename='scripts/script.js')}}"></script>
 
     <!-- UIkit CSS
@@ -24,8 +25,9 @@ UIkit JS -->
           DiaryApp
         </a>
         <div class="navbar" style="float: right;">
-          <a href="{{ url_for('login') }}" class="navbar right">Login</a>
-        <a href="{{ url_for('signup') }}" class="navbar right">Sign Up</a>
+          <a class="Login" href="{{ url_for('login') }}" class="navbar right">Login</a>
+        <a class="Signup" href="{{ url_for('signup') }}" class="navbar right">Sign Up</a>
+        <a class = 'Logout' href="{{ url_for('logout') }}" class="navbar right">Log out</a>
         </div>
         
       </nav>

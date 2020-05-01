@@ -161,3 +161,20 @@ document.addEventListener('DOMContentLoaded', function(){
     
         
 }, false);
+
+
+function AddToDiary(){
+    var memory= document.getElementById('memory');
+    var tag = document.getElementById('memorytag');
+    var diary = document.getElementById('diary');
+    diary.value += memory.value;
+    // create an object
+    dairy_obj= { 'id': "",
+        "text":  memory.value, 
+                    'tag': tag.value,
+                    "date": ""
+    };
+
+    console.log(dairy_obj)
+
+}

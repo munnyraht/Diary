@@ -1,14 +1,27 @@
 {% extends 'base.html'%}
 
 {%block head%}
-
+    <style>
+        .login{
+            display: none;
+            padding-right: 1rem;
+        }
+        .signup{
+            display: none;
+            padding-right: 1rem;
+        }
+        .logout{
+            display: block;
+        }
+    </style>
 {% endblock %}
 
 {% block body %}
 
+
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-6 col-sm-12">
+        <div class=" col xl-3 col-lg-4 col-md-6 col-sm-12">
             <div class="elegant-calencar">
        <p id="reset">reset</p>
         <div id="header" class="d-flex">
@@ -92,7 +105,65 @@
 
             
         </div>
-    </div>
+       
+        <div class=" col" >
+            <form action="" class="p-3" method="POST">
+                <h3> hi , {{ username }} Write down and Tag your memories</h3>
+                <div class="form-row">
+                    <div class="col">
+                        <h5> Your Memories</h5>
+                    <div style="width:90%; height:300%;" class="form-control p-2"   id='diary'> Dear Diary.....
+                        <table>
+                            {% for entry  in  entries %}
+                                <tr> <td class="content{{ entries.index(entry)}}">{{entry.entry}}</td>
+                                        <td style="display: none;" >{{entry.tag}}</td>
+                                        <td style="display:none" class="edit{{ entries.index(entry)}}">
+                                            <a href="">Update</a>
+                                            <a href="">Delete</a>
+                                        </td> 
+                                </tr>
+                                {% endfor %}
+                        </table> </div>
+                    </div>
+
+                    <div class="col">
+                        <label for="lastname">what happened today.... </label>
+                        <!-- <textarea name="" id="" cols="40" rows="3"> Dear Diary....</textarea> -->
+                        <input type="text" class="form-control mb-1" id="memory" required name= "memory" >
+                        <select class=" form-control" id ='memorytag'  name = 'tag'>
+                            <option value="" disabled >Choose a  feeling</option>
+                            <option value="Happy"style="background-color: green;color:white">Happy</option>
+                            <option value="Sad" style="background-color: red;color:white">Sad</option>
+                            <option value="Amazing" style="background-color: yellow;color:white">Amazing</option>
+                            <option value="Neutral" style="background-color: grey;color:white">Neutral</option>
+                    
+                          </select>
+
+                          
+                        <!-- <div class="btn-group">
+                            <select type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Choose a Feeling
+                            </button>
+                            <option class="dropdown-menu p-0">
+                              <select class="dropdown-item" href="#" style="background-color: green;color:white">Happy</a>
+                              <select class="dropdown-item " href="#" style="background-color: red;color:white">Sad</a>
+                              <select class="dropdown-item" href="#" style="background-color: yellow;color:white">Amazing</a>
+                              <select class="dropdown-item" href="#" style="background-color: grey;color:white">Neutral</a>
+
+                            </div>
+                          </div>-->
+                          <div>
+                            <button class="btn btn-primary m-1" id= 'addToDiary' onclick="AddToDiary()"> Add To Diary</button>
+                          </div>
+                          
+                    </div> 
+                
+                </div>
+                </form>
+               
+        </div>
+
+</div>
 </div>
 
 

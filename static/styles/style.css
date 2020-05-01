@@ -240,3 +240,10 @@ tbody td:active {
     -ms-transform: scale(0.8);
     transform: scale(0.8);     
 }
+
+.msg{
+    color: red;
+}
+.logout{
+    display: none;
+}

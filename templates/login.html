@@ -6,28 +6,30 @@
 
 {% block body %}
 <div class="container d-flex p-5">
-    <div class="col">
-        <img src="/static/images/write_diary.jpeg" alt="">
+    <div class="row">
+        <div class="col">
+            <img src="/static/images/write_diary.jpeg" alt="">
 
+        </div>
+
+        <div class="col">
+
+            <form  style="color:blue" action=" {{ url_for('login') }}" method="POST">
+                    <h3> Login Here</h3>
+                    <div class="form-group">
+                    <label for="username">username</label>
+                    <input type="username" class="form-control" id="username" aria-describedby="username" name = 'username'>
+                    </div>
+                    <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                    </div>
+                    <div class= 'msg'>{{msg}}</div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
     </div>
 
-    <div class="col">
-
-        <form  style="color:blue">
-                <h3> Login Here</h3>
-                <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <button type="submit" class="btn btn-primary">Login</button>
-        </form>
-    </div>
-</div>
 
 
 
