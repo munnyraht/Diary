@@ -11,15 +11,17 @@ Create a database 'Diary'
 import the `users` table and `entries` table in the sql_dumps
 import it into yhe diary data base yoou created.
 Modify SQL credentials according to your engine in the app.py file
-```app.config['MYSQL_HOST'] = '127.0.0.1'
+
+  app.config['MYSQL_HOST'] = '127.0.0.1'
   app.config['MYSQL_PORT'] = 3306
   app.config['MYSQL_USER'] = 'root'
-  app.config['MYSQL_PASSWORD'] = 'root' ```
-  
-  run app : python app.py from Diary directory
-  login details: username : munny
-                 password : munny.
-  or create an account.
-                 
+  app.config['MYSQL_PASSWORD'] = 'root'
+ 
+run app : python app.py from Diary directory
+login details:
+  username : munny
+  password : munny.
+or create an account.
+
             
   
